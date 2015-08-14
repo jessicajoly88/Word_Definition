@@ -36,4 +36,14 @@ describe(Definition) do
     end
   end
 
+  describe("#id") do
+    it("returns the id of the definition") do
+      test_definition = Definition.new({:word => "Banana", :definition => "A banana is an edible fruit that comes prepackaged in its own yellow jacket."})
+      test_definition.save()
+      expect(test_definition.id()).to(eq(1))  
+    end
+
+  end
+
+
 end

@@ -4,6 +4,7 @@ class Definition
 
   define_method(:initialize) do |attributes|
     @definition = attributes.fetch(:definition)
+    @id = @@definitions.length().+(1)
   end
 
   define_singleton_method(:all) do
@@ -16,6 +17,11 @@ class Definition
 
   define_singleton_method(:clear) do
     @@definitions = []
-  end  
+  end
+
+  define_method(:id) do
+    @id
+  end
+
 
 end
