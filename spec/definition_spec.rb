@@ -3,9 +3,9 @@ require('definition')
 require('word')
 
 describe(Definition) do
-  # # before() do
-  # #   Definition.clear()
-  # end
+  before() do
+    Definition.clear()
+  end
 
   describe('#definition') do
     it("returns a definition of a word") do
@@ -54,5 +54,11 @@ describe(Definition) do
     end
   end
 
+  describe("#all_definitions") do
+    it("initially returns an empty array of definitions for a word") do
+      test_definition = Definition.new ({:word => "Banana", :definition => "A banana is an edible fruit that comes prepackaged in its own yellow jacket."})
+      expect(test_definition.all_definitions()).to(eq([]))
+    end
+  end
 
 end
