@@ -8,6 +8,6 @@ describe('word list path',{:type =>:feature}) do
   visit('/')
   fill_in('word', :with => 'Banana')
   click_button('Add')
-  expect(page.)to have_content("Success!")
+  expect(page).to have_content("Success!")
   end
 end
