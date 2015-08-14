@@ -15,4 +15,12 @@ describe(Word) do
     end
   end
 
+  describe('#save') do
+    it("pushes a word to an array of saved words") do
+      test_word = Word.new({:word => "Banana"})
+      test_word.save()
+      expect(Word.all()).to(eq([test_word]))
+    end
+  end
+
 end
