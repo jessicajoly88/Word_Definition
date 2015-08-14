@@ -28,4 +28,12 @@ describe(Definition) do
     end
   end
 
+  describe(".clear") do
+    it("empties the array of saved definitions") do
+      test_definition = Definition.new({:word => "Banana", :definition => "A banana is an edible fruit that comes prepackaged in its own yellow jacket."})
+      test_definition.save()
+      expect(Definition.clear()).to(eq([]))
+    end
+  end
+
 end
