@@ -6,4 +6,9 @@ class Definition
     @definition = attributes.fetch(:definition)
   end
 
+  define_singleton_method(:all) do
+    @@definitions
+
+  end
+
 end
