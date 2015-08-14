@@ -1,0 +1,21 @@
+<h1>Here is information on this word:</h1>
+<h3>
+Definition: <%=@definition.
+
+
+
+Add definitions(s):
+<ul>
+  <% @word.definition.each() do |definition| %>
+  <li><%= definition.() %></li>
+  <% end %>
+</ul>
+<br>
+<form action="/word/<%=@word.id%>" method="post">
+  <label for="definition">Definition(s):</label>
+  <br>
+  <input id="definition" name="definition" type="text">
+  <button type= "submit">Add Definition</button>
+</form>
+
+<a href="/">Go back to the Word List</a>
