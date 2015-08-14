@@ -20,4 +20,12 @@ describe(Definition) do
     end
   end
 
+  describe('#save') do
+    it("saves the given definition to a word in the list") do
+      test_definition = Definition.new({:word => "Banana", :definition => "A banana is an edible fruit that comes prepackaged in its own yellow jacket."})
+      test_definition.save()
+      expect(Definition.all()).to(eq([test_definition]))
+    end
+  end
+
 end
