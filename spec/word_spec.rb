@@ -23,4 +23,12 @@ describe(Word) do
     end
   end
 
+  describe('.clear') do
+    it("empties out the array") do
+      test_word = Word.new({:word => "Banana"})
+      test_word.save()
+      expect(Word.clear()).to(eq([]))
+    end
+  end
+
 end
