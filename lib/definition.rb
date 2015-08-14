@@ -7,7 +7,7 @@ class Definition
     @definition = attributes.fetch(:definition)
     @id = @@list_definitions.length().+(1)
     @all_definitions = []
-    # @definitions = []
+    @definitions = []
   end
 
   define_singleton_method(:all) do
