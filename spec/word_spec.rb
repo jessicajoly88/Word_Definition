@@ -59,7 +59,7 @@ describe(Word) do
       test_word = Word.new({:word => "Watermelon"})
         test_definition = Definition.new({:definition => "A tropical fruit"})
         test_word.add_definition(test_definition)
-        expect(test_definition.definitions).to(eq([test_definition]))
+        expect(test_word.definitions).to(eq([test_definition]))
       end
     end
 

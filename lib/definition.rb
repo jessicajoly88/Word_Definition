@@ -1,7 +1,7 @@
 class Definition
   attr_reader(:definition)
   @@list_definitions =[]
-  @@definitions =[]
+
 
   define_method(:initialize) do |attributes|
     @definition = attributes.fetch(:definition)
@@ -39,14 +39,5 @@ class Definition
   define_method(:all_definitions) do
     @all_definitions
   end
-
-  define_method(:definitions) do
-    @definitions
-  end
-
-  # define_method(:add_definition) do |define|
-  #   @definitions.push(define)
-  # end
-
 
 end
