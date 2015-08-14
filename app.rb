@@ -16,7 +16,7 @@ post("/") do
   erb(:success)
 end
 
-# get("/word/:id") do
-#   @word = Word.find(params.fetch('id').to_i())
-#   erb(:word)
-# end
+get("/word/:id") do
+  @word = Word.find(params.fetch('id').to_i())
+  erb(:word)
+end

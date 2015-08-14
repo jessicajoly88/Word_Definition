@@ -1,18 +1,19 @@
-
+<center>
 <h1>Welcome to this very useful dictionary of sorts!</h1>
+<br>
+<br>
+</center>
 <h3>Here are all your words:</h3>
-
 <ul>
   <% @words.each() do |word| %>
   <li><a href="/word/<%= word.id() %>"><%= word.word %></a></li>
   <% end %>
 </ul>
-
-
+<br>
+<br>
 <p>Add a new word:</p>
-
 <form action="/" method="post">
-  <label for= "word"> Word:</label>
-  <input id = "word" word="word" type="text"
-  <button type="submit"> Add </button>
+  <label for="word">Word:</label>
+  <input id="word" name="word" type="text">
+  <button type="submit">Add word!</button>
 </form>

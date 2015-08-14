@@ -1,15 +1,18 @@
-<h1>Here is information on this word:</h1>
+<center>
+<h1>Here is information on your chosen word</h1>
+</center>
 <h3>
-Definition: <%=@definition.definition %>
+Word: <%= @word.word %>
+<br>
 
-
-Add definitions(s):
+Add definitions(s)to this word:
 <ul>
-  <% @word.definition.each() do |definition| %>
-  <li><%= definition.definition.() %></li>
+  <% @word.definitions.each() do |definition| %>
+  <li><%= word.add_definition() %></li>
   <% end %>
 </ul>
 <br>
+
 <form action="/word/<%=@word.id%>" method="post">
   <label for="definition">Definition(s):</label>
   <br>
