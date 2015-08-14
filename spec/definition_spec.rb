@@ -60,6 +60,4 @@ describe(Definition) do
       expect(test_definition.all_definitions()).to(eq([]))
     end
   end
-
-
 end
