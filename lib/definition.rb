@@ -1,23 +1,25 @@
 class Definition
   attr_reader(:definition)
+  @@list_definitions =[]
   @@definitions =[]
 
   define_method(:initialize) do |attributes|
     @definition = attributes.fetch(:definition)
-    @id = @@definitions.length().+(1)
+    @id = @@list_definitions.length().+(1)
     @all_definitions = []
+    # @definitions = []
   end
 
   define_singleton_method(:all) do
-    @@definitions
+    @@list_definitions
   end
 
   define_method(:save) do
-    @@definitions.push(self)
+    @@list_definitions.push(self)
   end
 
   define_singleton_method(:clear) do
-    @@definitions = []
+    @@list_definitions = []
   end
 
   define_method(:id) do
@@ -26,7 +28,7 @@ class Definition
 
   define_singleton_method(:find) do |id|
     found_definition = nil
-    @@definitions.each() do |definition|
+    @@list_definitions.each() do |definition|
       if definition.id().eql?(id.to_i())
         found_definition = definition
       end
@@ -37,5 +39,14 @@ class Definition
   define_method(:all_definitions) do
     @all_definitions
   end
+
+  define_method(:definitions) do
+    @definitions
+  end
+
+  # define_method(:add_definition) do |define|
+  #   @definitions.push(define)
+  # end
+
 
 end

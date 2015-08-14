@@ -1,6 +1,7 @@
 class Word
   attr_reader(:word)
   @@words = []
+  @@definitions =[]
 
   define_method(:initialize) do |attributes|
     @word = attributes.fetch(:word)
@@ -30,7 +31,15 @@ class Word
         found_word = word
       end
     end
-    found_word    
+    found_word
+  end
+
+  define_method(:definitions) do
+    @@definitions
+  end  
+
+  define_method(:add_definition) do |define|
+    @@definitions.push(define)
   end
 
 
