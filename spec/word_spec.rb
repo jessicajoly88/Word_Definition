@@ -31,4 +31,11 @@ describe(Word) do
     end
   end
 
+  describe('#id') do
+    it("returns the id of the word") do
+      test_word = Word.new({:word => "Banana"})
+      test_word.save()
+      expect(test_word.id()).to(eq(1))
+    end
+  end
 end

@@ -4,6 +4,7 @@ class Word
 
   define_method(:initialize) do |attributes|
     @word = attributes.fetch(:word)
+    @id = @@words.length().+(1)
   end
 
   define_singleton_method(:all) do
@@ -16,7 +17,10 @@ class Word
 
   define_singleton_method(:clear) do
     @@words = []
-
   end
+
+  define_method(:id) do
+    @id
+  end  
 
 end
